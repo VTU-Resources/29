@@ -118,7 +118,7 @@
       <ul>
         <li>All Modules Notes</li>
         <li>Model Question Papers</li>
-        <li>Most Important Questions (5 PDFs per module)</li>
+        <li>100% Important Questions (5 PDFs per module)</li>
         <li>Extra Reference Materials</li>
         <li>Quiz for Brain Recalling Power</li>
         <li>Certificate of Completion</li>
@@ -178,7 +178,7 @@
     </div>
 
     <div class="cta">
-      <button onclick="showMessage()">I'm Interested - Get Started</button>
+      <button onclick="redirectToWhatsApp()">I'm Interested - Get Started</button>
     </div>
   </div>
 
@@ -187,8 +187,12 @@
   </footer>
 
   <script>
-    function showMessage() {
-      alert("Thank you for your interest! Please proceed with the official steps mentioned.");
+    function redirectToWhatsApp() {
+      const phone = "9113039893";
+      const message = "Hi Professor, \nI Like to Get benefitted with Premium Materials How to proccess with it";
+      const encodedMessage = encodeURIComponent(message);
+      const url = `https://wa.me/${phone}?text=${encodedMessage}`;
+      window.open(url, '_blank');
     }
   </script>
 </body>
